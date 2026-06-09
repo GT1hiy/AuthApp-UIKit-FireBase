@@ -17,8 +17,22 @@ final class TextField: UITextField {
     
     private func setupPlaceholder(placeholder: String) {
         attributedPlaceholder = NSAttributedString(string: placeholder, attributes:  [
-            .foregroundColor: UIColor.
+            .foregroundColor: UIColor.lightGray
         ])
+    }
+    
+    private func setupLeftView(image: String) {
+        let leftIconView = {
+            $0.image = UIImage(named: image)
+            $0.contentMode = .scaleAspectFit
+            $0.clipsToBounds = true
+            $0.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+            $0.tintColor = .lightGray
+            return $0.image
+        }(UIImageView())
+        
+        let leftContainerView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 20))
+        
     }
     
     required init(coder: NSCoder){
