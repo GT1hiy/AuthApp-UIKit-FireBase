@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class TextButton: UIButton {
+final class TextButton: UIButton {
     init(text: String, color: UIColor = .white, fonSize: CGFloat = 12, action: UIAction) {
         super.init(frame: .zero)
         self.setTitle(text, for: .normal)

@@ -60,7 +60,7 @@ final class TextField: UITextField {
     private func setupRightView() {
         
         let rightButtonView = {
-            $0.frame.size = CGSize(width: 20, height: 20)
+            $0.frame.size = CGSize(width: 20, height: 15)
             $0.tintColor = .gray
             $0.setImage(UIImage(systemName: "eye"), for: .normal)
             
@@ -81,6 +81,3 @@ final class TextField: UITextField {
     }
 }
 
-#Preview {
-    ViewController()
-}
